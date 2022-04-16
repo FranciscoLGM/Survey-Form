@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">
+            Este es un formulario de encuesta. Por favor, responda a las siguientes preguntas:
+        </p>
+    </header>
+
+    <section class="container">
+        <form id="survey-form">
+
+            <fieldset>
+                <label id="name-label" for="name">Nombre</label>
+                <input class="input__control" type="text" name="name" id="name" required
+                    placeholder="Introduzca su nombre">
+            </fieldset>
+
+            <fieldset>
+                <label id="email-label" for="email">Email</label>
+                <input class="input__control" type="email" name="email" id="email" required
+                    placeholder="Introduzca su email">
+            </fieldset>
+
+            <fieldset>
+                <label id="number-label" for="number">Edad<span>(Opcional)</span></label>
+                <input class="input__control" type="number" min="12" max="99" name="edad" id="number"
+                    placeholder="Edad">
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Qué opción describe mejor su función actual?</legend>
+                <select class="select__control" name="role" id="dropdown" required>
+                    <option disabled selected value="">Seleccione una opción</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="full-time">Trabajo en a tiempo completo</option>
+                    <option value="part-time">Trabajo a tiempo parcial</option>
+                    <option value="preferNo">Prefiero no decir</option>
+                    <option value="other">Otro</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Qué tipo de trabajo le gustaría realizar?</legend>
+                <label for="job1"><input type="radio" name="job" id="job1" value="programador">Programador</label>
+                <label for="job2"><input type="radio" name="job" id="job2" value="desarrollador">Desarrollador</label>
+                <label for="job3"><input type="radio" name="job" id="job3" value="diseñador">Diseñador</label>
+                <label for="job4"><input type="radio" name="job" id="job4" value="otro">Otro</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Qué le gustaría que se mejorara?<span>(Marque todo lo que corresponda)</span></legend>
+                <label for="improvement1"><input type="checkbox" name="improvement" id="improvement1"
+                        value="navegación">Navegación</label>
+                <label for="improvement2"><input type="checkbox" name="improvement" id="improvement2"
+                        value="usabilidad">Usabilidad</label>
+                <label for="improvement3"><input type="checkbox" name="improvement" id="improvement3"
+                        value="interfaz">Interfaz</label>
+                <label for="improvement4"><input type="checkbox" name="improvement" id="improvement4"
+                        value="otro">Otro</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Algún comentario o sugerencia?</legend>
+                <textarea class="textarea__control" name="comment" id="comment" cols="30" rows="10"
+                    placeholder="Escriba aquí su comentario"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <button id="submit" type="submit">Enviar</button>
+            </fieldset>
+
+        </form>
+    </section>
+
+</body>
+
+</html>
